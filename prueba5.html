@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+body{
+	overflow:hidden;	
+	background-image: url('img/piso.png');
+	background-color: black;
+}
+	.imgNub{
+		width: 150px;
+
+	}
+	.nubes{
+
+		height:300px;
+		
+		position: relative;
+	}
+	.nub{
+		
+		background-size: 100%; 
+		position: absolute;
+		animation: movimiento 30s infinite;
+
+	}
+	.nub2{
+		
+		background-size: 100%; 
+		position: absolute;
+		animation: movimiento 20s infinite;
+		top: 100px;
+	}
+	.nub3{
+		background-size: 100%; 
+		position: absolute;
+		animation: nubemoviz 15s infinite;
+		top: 150px;
+	}
+
+	@keyframes nubemoviz{
+		from{
+			margin-left: -30%;  
+		}
+		to{
+			margin-left: 100%;
+		}
+
+	}
+
+	@keyframes movimiento{
+		from{
+			margin-left:100%;  
+		}
+		to{
+			margin-left:-100%;
+		}
+		//misiles
+
+		}
+
+	.misil{
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 10s infinite;
+		}
+		.miss{
+		width: 100px;	
+top: 50px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 10s infinite;
+		}
+			.misil0{
+			top: 150px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 30s infinite;
+		}
+		.misil1{
+			top: 250px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 8s infinite;
+		}
+		.misil2{
+			top: 30px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 12s infinite;
+		}
+		.misil3{
+			top: 350px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataque 10s infinite;
+		}
+		.misil4{
+			top: 450px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataqueB 20s infinite;
+		}
+		.misil5{
+			top: 550px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataqueB 24s infinite;
+		}
+		.misil6{
+			top: 650px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataqueA 15s infinite;
+		}
+		.misil7{
+			top: 750px;
+			background-size: 100%; 
+			position: absolute;
+			animation: ataqueA 18s infinite;
+		}
+	@keyframes ataqueA{
+		from{
+			margin-left: -30%;  
+		}
+		to{
+			margin-left: 100%;
+		}
+	}
+
+		@keyframes ataqueB{
+		from{
+			margin-left: -30%;  
+		}
+		to{
+			margin-left: 100%;
+		}
+}
+		@keyframes ataque{
+		from{
+			margin-left: -30%;  
+		}
+		to{
+			margin-left: 100%;
+		}
+
+		}
+
+	//piso 
+	div .pisofondo2{
+		position: relative;
+		width: 100%;
+		height: 150px;
+		background-color: red;
+		
+	}
+	.circulo{
+	background-color: #e64980;
+	border: 4px dashed #b22;
+	width: 60px;
+	height: 30px;
+	border-radius: 29px;  
+	}
+
+div.ovni_lugar{
+	position: relative;
+	width: 100px;
+	cursor: pointer;
+
+}
+.ovni{
+	position: relative;
+	left: 500px;
+	width: 100px;
+}
+
+
+
+//puntaje
+.puntos{
+	width: 100%;
+	position: relative;
+	text-align: center;
+margin-left: 10px;
+
+}
+.vida{
+		position: relative;
+		margin-left: 10px;
+		float: right;
+		display: inline-block;
+		width: 100px;
+		height: 30px;
+		border-radius: 50px;
+		background-color:#7AFFE0 ;
+		border: 7px dashed white;
+
+}
+.caja_puntos{
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+.misiles{
+	width: 100px;
+	display: block;
+}
+//caja de puntuacion
+div.puntos{
+	margin: 0 auto;
+	text-align: center;
+}
+.puntotes,.tiempo{
+	text-align: center;
+	font-size: 20px;
+}
+
+</style>
+<body onload="setInterval()">
+
+
+	<div class="nubes" >
+
+<div class="caja_puntos">
+	
+	<div class="puntos">
+			
+		<div class="vida">
+				tiempo:
+				<p class="tiempo"id="tiempo"></p>
+		</div>
+			<div class="vida">
+				puntos:<p class="puntotes"></p>
+		</div>
+		
+	 <div class="vida">
+				vida:<p class="vidas">1</p>
+		</div>
+	
+	</div>
+</div>
+
+		<div class="nub">
+		<img class="imgNub"src="img/n4.png" alt="">
+
+		</div>
+		<div class="nub2">
+		<img class="imgNub"src="img/n1.png" alt="">
+		
+		</div>
+		<div class="nub3">
+		<img class="imgNub"src="img/n2.png" alt="">
+		
+		</div>
+
+		
+	</div>
+	
+	<div class="piso">
+		<div class="pisofondo">
+					<div class="ovni_lugar imagen" id="ovni_lugar" >
+						<img class="ovni" id="ovni"src="img/ovni.png"  alt="">
+					</div>
+		</div>
+
+
+	</div>
+
+			
+	</div>
+	<div class="misiles">
+		<div class="misil0">
+			<img class="miss"   src="img/misil.png" alt="">
+		</div>	
+				<div class="misil1">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+
+		<div class="misi2">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+
+		<div class="misil3">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+		<div class="misil4">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+		<div class="misil5">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+		<div class="misil6">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+		<div class="misil7">
+			<img class="miss" src="img/misil.png" alt="">
+		</div>	
+		
+	</div>
+
+
+	<audio autoplay id="audio2"  loop="true">
+  <source src="audio/interno.mp3">
+</audio>
+</center>
+<script>
+  var audio = document.getElementById("audio2");
+  audio.volume = 0.03;
+</script>
+<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+
+
+</body>
+
+</html>
