@@ -1,0 +1,4 @@
+-Descomprimir el archivo juego Ovni
+-Ingresar a la carpeta index con doble click
+-A jugar!!
+
